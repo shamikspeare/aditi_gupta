@@ -239,10 +239,10 @@ export default function Home() {
 
           <SectionReveal className="relative z-10 mx-auto w-full max-w-[94rem]">
             <div className="grid items-start gap-12 lg:grid-cols-[minmax(20rem,0.9fr)_minmax(0,1.55fr)] lg:gap-16 xl:gap-24">
-              <div className="max-w-2xl">
+              <div className="max-w-2xl [text-shadow:0_2px_18px_rgba(0,0,0,0.85)]">
                 <p
                   data-reveal="text"
-                  className="flex items-center gap-4 text-[0.65rem] uppercase tracking-[0.24em] text-yellow-400/65"
+                  className="flex items-center gap-4 text-xs font-medium uppercase tracking-[0.24em] text-yellow-300/90"
                 >
                   Made for you
                   <span className="h-px w-10 bg-yellow-400/45" />
@@ -251,14 +251,14 @@ export default function Home() {
                   id="commissions-title"
                   data-reveal="text"
                   data-reveal-delay="0.06"
-                  className="mt-7 font-serif text-[clamp(3.5rem,7vw,7.5rem)] leading-[0.82] tracking-[-0.05em]"
+                  className="mt-7 font-serif text-[clamp(4rem,7.5vw,8rem)] leading-[0.82] tracking-[-0.05em] text-yellow-300"
                 >
                   Commissions
                 </h2>
                 <p
                   data-reveal="text"
                   data-reveal-delay="0.12"
-                  className="mt-8 text-sm font-light leading-[1.85] text-yellow-100/70 sm:text-base"
+                  className="mt-8 max-w-xl text-base font-normal leading-[1.85] text-white/90 sm:text-lg"
                 >
                   I’m open to all kinds of commissions, from album covers to
                   gifts and dream places to wedding memories and anything close
@@ -289,10 +289,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-20 grid gap-10 border-t border-yellow-400/20 pt-12 lg:grid-cols-[minmax(14rem,0.55fr)_minmax(0,1.45fr)] lg:gap-16">
+            <div className="mt-20 grid gap-10 border-t border-white/20 pt-12 [text-shadow:0_2px_18px_rgba(0,0,0,0.75)] lg:grid-cols-[minmax(14rem,0.55fr)_minmax(0,1.45fr)] lg:gap-16">
               <h3
                 data-reveal="text"
-                className="font-serif text-3xl leading-tight text-yellow-300 sm:text-4xl"
+                className="max-w-xs font-serif text-4xl leading-[1.05] text-white sm:text-5xl"
               >
                 The process is simple
               </h3>
@@ -304,9 +304,9 @@ export default function Home() {
                       key={step}
                       data-reveal="text"
                       data-reveal-delay={Math.min(index * 0.04, 0.2)}
-                      className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-yellow-400/15 py-5 text-sm font-light leading-relaxed text-yellow-100/70 sm:grid-cols-[3rem_1fr] sm:text-base"
+                      className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-white/15 py-5 text-base font-normal leading-relaxed text-white/85 sm:grid-cols-[3rem_1fr] sm:text-lg"
                     >
-                      <span className="font-serif text-lg text-yellow-400/75">
+                      <span className="font-serif text-xl text-yellow-300">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <span>{step}</span>
@@ -316,14 +316,14 @@ export default function Home() {
 
                 <div
                   data-reveal="text"
-                  className="mt-9 space-y-5 text-sm leading-relaxed sm:text-base"
+                  className="mt-9 space-y-5 text-base leading-relaxed sm:text-lg"
                 >
                   <p className="font-semibold text-yellow-300">
                     P.S. Please contact me at least 10 days before you need the
                     artwork.
                   </p>
-                  <div className="space-y-2 text-yellow-100/70">
-                    <p className="font-semibold text-yellow-200">
+                  <div className="space-y-2 text-white/80">
+                    <p className="font-semibold text-white">
                       I also sell my pre-made works, stickers, and prints, which
                       are available through my Instagram posts and the gallery
                       here.
