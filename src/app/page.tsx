@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
 import { ContactSection } from "@/components/contact-section";
+import { GalleryLightbox } from "@/components/gallery-lightbox";
 import { HeroTitle } from "@/components/hero-title";
 import { ScrollIndicator } from "@/components/scroll-indicator";
 import { SectionBackground } from "@/components/section-background";
@@ -177,32 +178,50 @@ export default function Home() {
           <SectionTransition edge="top" />
           <SectionTransition edge="bottom" />
 
-          <SectionReveal className="relative z-10 mx-auto w-full max-w-[82rem]">
-            <p
-              data-reveal="text"
-              className="flex items-center gap-4 text-[0.65rem] uppercase tracking-[0.24em] text-yellow-400/65"
+          <SectionReveal className="relative z-10 mx-auto grid w-full max-w-[82rem] items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
+            <div className="lg:order-2">
+              <p
+                data-reveal="text"
+                className="flex items-center gap-4 text-[0.65rem] uppercase tracking-[0.24em] text-yellow-400/65"
+              >
+                The artist
+                <span className="h-px w-10 bg-yellow-400/45" />
+              </p>
+              <h2
+                id="about-title"
+                data-reveal="text"
+                data-reveal-delay="0.06"
+                className="mt-7 font-serif text-[clamp(3.7rem,8vw,8rem)] leading-[0.82] tracking-[-0.05em]"
+              >
+                About Me
+              </h2>
+              <p
+                data-reveal="text"
+                data-reveal-delay="0.12"
+                className="mt-9 max-w-4xl text-base font-light leading-[1.85] text-yellow-100/72 sm:text-lg lg:text-xl"
+              >
+                Hello! I’m Aditi Gupta, an artist based in Delhi with a passion
+                for experimenting on canvas, paper, and unconventional surfaces.
+                Through my art and creative content, I’m constantly exploring
+                new mediums and finding fresh ways to express and expand my
+                ideas.
+              </p>
+            </div>
+
+            <figure
+              data-reveal="media"
+              data-reveal-delay="0.08"
+              className="overflow-hidden lg:order-1"
             >
-              The artist
-              <span className="h-px w-10 bg-yellow-400/45" />
-            </p>
-            <h2
-              id="about-title"
-              data-reveal="text"
-              data-reveal-delay="0.06"
-              className="mt-7 font-serif text-[clamp(3.7rem,8vw,8rem)] leading-[0.82] tracking-[-0.05em]"
-            >
-              About Me
-            </h2>
-            <p
-              data-reveal="text"
-              data-reveal-delay="0.12"
-              className="mt-9 max-w-4xl text-base font-light leading-[1.85] text-yellow-100/72 sm:text-lg lg:text-xl"
-            >
-              Hello! I’m Aditi Gupta, an artist based in Delhi with a passion
-              for experimenting on canvas, paper, and unconventional surfaces.
-              Through my art and creative content, I’m constantly exploring new
-              mediums and finding fresh ways to express and expand my ideas.
-            </p>
+              <Image
+                src="/about-aditi.png"
+                alt="Portrait of Aditi Gupta in a sunlit courtyard"
+                width={1600}
+                height={1200}
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="h-auto w-full"
+              />
+            </figure>
           </SectionReveal>
         </section>
 
@@ -350,25 +369,7 @@ export default function Home() {
               Gallery
             </h2>
 
-            <div className="mt-14 columns-2 gap-3 sm:gap-5 lg:columns-4 lg:gap-6">
-              {galleryArtworks.map((artwork, index) => (
-                <figure
-                  key={artwork.src}
-                  data-reveal="media"
-                  data-reveal-delay={(index % 4) * 0.06}
-                  className="mb-3 break-inside-avoid overflow-hidden sm:mb-5 lg:mb-6"
-                >
-                  <Image
-                    src={artwork.src}
-                    alt={artwork.alt}
-                    width={artwork.width}
-                    height={artwork.height}
-                    sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="h-auto w-full transition-transform duration-700 ease-out hover:scale-[1.015]"
-                  />
-                </figure>
-              ))}
-            </div>
+            <GalleryLightbox artworks={galleryArtworks} />
           </SectionReveal>
         </section>
 
