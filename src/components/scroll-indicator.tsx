@@ -8,8 +8,8 @@ export function ScrollIndicator() {
 
   return (
     <a
-      href="#works"
-      aria-label="Scroll to featured works"
+      href="#about"
+      aria-label="Scroll to the About Me section"
       className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-1.5 text-[#fffaf2] sm:bottom-8"
     >
       <span className="whitespace-nowrap font-serif text-[0.6rem] lowercase tracking-[0.2em] drop-shadow-[0_2px_4px_rgba(0,0,0,0.75)] sm:text-[0.65rem]">

@@ -2,10 +2,10 @@ import { ArrowUp } from "lucide-react";
 import { SectionReveal } from "@/components/section-reveal";
 
 const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Works", href: "/#works" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "#about" },
+  { label: "Commissions", href: "#commissions" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function SiteFooter() {
@@ -15,14 +15,14 @@ export function SiteFooter() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div data-reveal="text">
             <a
-              href="/"
+              href="#home"
               className="font-hero text-6xl leading-none sm:text-7xl"
               aria-label="Aditi Gupta, back to home"
             >
               aditi gupta
             </a>
             <p className="mt-3 text-xs uppercase tracking-[0.2em] text-[#020617]/65">
-              Artist · Mumbai, India
+              Artist · Delhi, India
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export function SiteFooter() {
         >
           <p>© 2026 Aditi Gupta. All rights reserved.</p>
           <a
-            href="/"
+            href="#home"
             className="inline-flex items-center gap-2 text-[#020617] transition-opacity duration-300 hover:opacity-55"
           >
             Back to top

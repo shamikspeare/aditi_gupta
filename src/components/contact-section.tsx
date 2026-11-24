@@ -12,7 +12,7 @@ const contactDetails = [
   },
   {
     label: "Based in",
-    value: "Mumbai, India",
+    value: "Delhi, India",
     icon: MapPin,
   },
   {
@@ -34,7 +34,7 @@ export function ContactSection() {
     >
       <SectionBackground
         src="/bg4.webp"
-        imageClassName="object-[58%_center] sm:object-center"
+        mobileSrc="/bg4-mobile.webp"
       />
       <SectionTransition edge="top" />
 
